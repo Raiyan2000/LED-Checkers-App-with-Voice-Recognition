@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/boom"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3EFEF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.7"
+        android:background="@drawable/homescreenbackground">
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:paddingStart="15dp"
+        android:paddingTop="35dp">
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignParentTop="true"
+            android:text="Get Device"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/btn_color" />
+
+        <Button
+            android:id="@+id/connectbutton"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/button2"
+            android:text="Connect"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/btn_color" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:paddingTop="35dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:gravity="end"
+            android:text="Status"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="150dp"
+            android:layout_height="55dp"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentEnd="true"
+            android:buttonTint="@color/btn_color"
+            android:gravity="end"
+            android:text="Not connected"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/center_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_rl"
+        android:layout_marginTop="100dp"
+        android:paddingStart="90dp"
+        android:paddingEnd="15dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="225dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Current Player\n in turn:"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView6"
+            android:layout_alignParentStart="true"
+            android:text="Player Number"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/center_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="30dp"
+        android:paddingStart="90dp"
+        android:paddingEnd="15dp"
+        android:layout_alignParentStart="true"
+        >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Your Command:"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/VoiceCommandtextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentStart="true"
+
+            android:hint="Command Output"
+            android:text="Player Command"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="24sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+        <Button
+            android:id="@+id/VoiceCmdbutton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:text="Voice Command"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/btn_color" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_weight="0.1" />
+
+
+        <Button
+            android:id="@+id/StopVoiceButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.45"
+            android:text="Stop Command"
+            android:textAllCaps="false"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/btn_color" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_ll"
+        android:layout_marginBottom="50dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+
+
+        <EditText
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="@drawable/bg_edit_text"
+            android:enabled="false"
+            android:gravity="left|top"
+            android:imeOptions="actionNone"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:paddingEnd="12dp"
+            android:textAlignment="center"
+            android:textColor="@color/btn_txt_color"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
